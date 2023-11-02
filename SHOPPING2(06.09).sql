@@ -1,0 +1,122 @@
+SELECT *
+     FROM TB_MEMBER
+     WHERE GENDER = '여';
+SELECT *
+     FROM TB_PRD
+     WHERE PRD_PRICE >= 1000000;
+     
+     
+SELECT GRADE_NAME
+     FROM TB_GRADE
+     WHERE GRADE_CD>=4;
+SELECT *
+     FROM TB_MEMBER
+     WHERE MEMBER_NAME ='사용자D';
+SELECT *
+     FROM TB_MEMBER_TEL
+     WHERE TEL_DV_CD = '집';
+SELECT PRD_ID
+     , PRD_NAME
+     , PRD_PRICE
+     FROM TB_PRD
+     WHERE PRD_PRICE >1500000;
+SELECT *
+     FROM MAPPING
+     WHERE ENG = 'TEL';
+SELECT *
+     FROM TB_MEMBER
+     WHERE MEMBER_ID = 'AAAAA'
+     AND PASSWD = 'AAAAA';
+SELECT *
+     FROM TB_PRD
+     WHERE PRD_TYPE = '컴퓨터'
+     OR PRD_TYPE ='스마트폰';
+
+SELECT *
+     FROM TB_MEMBER
+     WHERE GRADE_CD =2 
+     AND GENDER = '남';
+SELECT PRD_NAME
+     , PRD_TYPE
+     , PRD_PRICE
+     FROM TB_PRD
+     WHERE PRD_TYPE ='욕실용품'
+     AND SELL_COMP_NAME ='다우니'
+     AND PRD_PRICE >= 20000;
+SELECT *
+     FROM TB_MEMBER
+     WHERE MEMBER_ID = 'AAAAA'
+     OR MEMBER_ID = 'BBBBB';
+     
+SELECT *
+     FROM TB_MEMBER_TEL
+     WHERE TEL_DV_CD != '휴대폰';
+     
+SELECT *
+     FROM TB_PRD
+     WHERE PRD_PRICE <= 15000;
+     
+SELECT *
+     FROM TB_MEMBER
+     WHERE GENDER IS NULL;
+
+SELECT *
+     FROM TB_MEMBER
+     WHERE AGE IS NOT NULL;
+SELECT *
+     FROM TB_MEMBER
+     WHERE GENDER IS NOT NULL AND AGE IS NOT NULL;
+SELECT *
+     FROM TB_PRD
+     WHERE PRD_TYPE = '가전'
+     OR PRD_TYPE ='욕실용품'
+     OR PRD_TYPE ='스마트폰';
+
+SELECT *
+     FROM TB_PRD
+     WHERE PRD_TYPE NOT IN ('가전', '욕실용품', '스마트폰', NULL);
+     
+SELECT *
+     FROM TB_MEMBER
+     WHERE GRADE_CD IN (1,2);
+     
+SELECT *
+     FROM TB_MEMBER
+     WHERE AGE IN (25, 30, 35);
+     
+SELECT *
+     FROM TB_MEMBER
+     WHERE AGE >= 20 
+     AND AGE <= 35;
+     
+SELECT *
+     FROM TB_MEMBER
+     WHERE AGE BETWEEN 20 AND 35;
+     
+SELECT * 
+     FROM TB_PRD
+     WHERE PRD_NAME LIKE '수%';
+SELECT *
+     FROM TB_PRD
+     WHERE PRD_TYPE LIKE '%용%';
+SELECT *
+     FROM TB_PRD 
+     WHERE PRD_NAME LIKE '%기';
+    
+
+SELECT *
+     FROM TB_PRD
+     WHERE PRD_NAME LIKE '__기';
+
+SELECT MEMBER_NAME
+     FROM TB_MEMBER
+     WHERE JOIN_DY LIKE '%2023%';
+
+SELECT PRD_TYPE
+     , PRD_NAME
+     , PRD_PRICE
+     FROM TB_PRD
+     WHERE PRD_TYPE IN ('주방용품' , '욕실용품');
+SELECT *
+     FROM TB_PRD
+     WHERE PRD_INFO LIKE '%적합한%';
